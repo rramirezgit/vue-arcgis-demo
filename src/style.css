@@ -1,0 +1,129 @@
+:root {
+  --fondo: #0b0e13;
+  --superficie: #12161d;
+  --superficie-alta: #1a1f28;
+  --borde: #232935;
+  --borde-suave: #1b2029;
+
+  --texto: #e8ecf2;
+  --texto-medio: #97a1b0;
+  --texto-suave: #626c7b;
+
+  --petroleo: #f2a73b;
+  --gas: #45c7d9;
+  --acento: #45c7d9;
+  --alerta: #f2704b;
+  --ok: #4ad991;
+
+  --radio: 10px;
+  --radio-chico: 7px;
+  --sombra: 0 8px 24px rgb(0 0 0 / 0.45);
+  --transicion: 140ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  color: var(--texto);
+  background: var(--fondo);
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#app {
+  height: 100vh;
+}
+
+button,
+select,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--borde);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2f3745;
+}
+
+/* --- Ajustes sobre los componentes del SDK --------------------------------- */
+
+/* Los componentes web del SDK se construyen sobre Calcite. Redefinir sus
+   tokens es la forma soportada de alinearlos con el tema de la aplicación,
+   en lugar de perforar el shadow DOM. */
+:root {
+  --calcite-color-background: #12161d;
+  --calcite-color-foreground-1: #12161d;
+  --calcite-color-foreground-2: #1a1f28;
+  --calcite-color-foreground-3: #232935;
+  --calcite-color-text-1: #e8ecf2;
+  --calcite-color-text-2: #97a1b0;
+  --calcite-color-text-3: #626c7b;
+  --calcite-color-border-1: #232935;
+  --calcite-color-border-2: #1f2531;
+  --calcite-color-border-3: #1b2029;
+  --calcite-color-brand: #45c7d9;
+  --calcite-color-brand-hover: #63d4e3;
+  --calcite-ui-icon-color: #97a1b0;
+
+  --calcite-font-size--3: 0.5625rem;
+  --calcite-font-size--2: 0.625rem;
+  --calcite-font-size--1: 0.6875rem;
+  --calcite-font-size-0: 0.75rem;
+  --calcite-font-size-1: 0.8125rem;
+}
+
+.esri-view,
+.esri-view-surface {
+  background: var(--fondo);
+}
+
+.esri-view-surface:focus::after {
+  outline: none !important;
+}
+
+.esri-attribution {
+  background: rgb(11 14 19 / 0.72) !important;
+  color: var(--texto-suave) !important;
+  font-size: 10px !important;
+  backdrop-filter: blur(6px);
+}
+
+.esri-popup__main-container {
+  border-radius: var(--radio) !important;
+  overflow: hidden;
+}
+
+arcgis-legend,
+arcgis-layer-list,
+arcgis-basemap-gallery,
+arcgis-home,
+arcgis-fullscreen,
+arcgis-scale-bar {
+  --calcite-color-brand: var(--acento);
+}
+
+arcgis-legend::part(container),
+arcgis-layer-list::part(container) {
+  background: transparent;
+}
