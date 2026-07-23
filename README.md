@@ -2,6 +2,8 @@
 
 Visor de pozos hidrocarburíferos sobre las cinco cuencas productivas argentinas, construido con **Vue 3 (Composition API) + Pinia + ArcGIS Maps SDK for JavaScript 5.1**.
 
+**En vivo:** [vue-arcgis-demo.vercel.app](https://vue-arcgis-demo.vercel.app)
+
 ![Captura de la aplicación](docs/demo.png)
 
 > Los datos de pozos son **simulados** y generados de forma determinista en el cliente. No representan ubicaciones, producciones ni operadoras reales.
